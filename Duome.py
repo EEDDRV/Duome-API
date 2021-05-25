@@ -38,8 +38,8 @@ class Duolingo_User():
 
 if __name__ == '__main__':
 	item = Duolingo_User(os.environ['DuolingoUsername'])
-	print(item.Days_left)
-	print(item.Persentage_Completed)
-	print(item.Strength)
-	print(item.Date_completion)
-	print(item.ETA)
+	#print(f"{item.Days_left}")
+	print(f"Persentage Completed: {item.Persentage_Completed}")
+	print(f"Strength: {item.Strength}")
+	print(f"Estimated date completed: {item.Date_completion.strftime('%m-%d-%Y')}")
+	print(f"Days left: {item.ETA}")
