@@ -10,7 +10,8 @@ class Duolingo_User():
 		self.Days_left = re.sub("[^0-9]", "", re.search('<h2>(.*)!</h2>', self.RAW_HTML ).group(1) )
 		self.Persentage_Completed = re.search('<b>(.*)complete</b>', self.RAW_HTML ).group(1)
 		self.Strength = re.search('\d\d\d?\d?', re.search('<b>Strength:</b> \d\d?\d?%', self.RAW_HTML).group(0)).group(0)
-		self.ETA =  self.Date_completion - datetime.datetime.now() # item.ETA.days
+		self.ETA_RAW =  self.Date_completion - datetime.datetime.now() # item.ETA.days
+		self.ETA =  (self.Date_completion - datetime.datetime.now()).days # item.ETA.days
 	def Get_Data(self, username):
 		url = f"https://duome.eu/{username}"
 		headers = {
@@ -42,4 +43,3 @@ if __name__ == '__main__':
 	print(item.Strength)
 	print(item.Date_completion)
 	print(item.ETA)
-	print(item.ETA.days)

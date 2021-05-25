@@ -9,5 +9,4 @@ item.Persentage_Completed
 item.Strength
 item.Date_completion
 item.ETA
-item.ETA.days
 ```
