@@ -1,5 +1,5 @@
 # Duome-API
-A package that return user data from the [Duome.eu](https://duome.eu/) website.
+A package that returns user data from the [Duome.eu](https://duome.eu/) website.
 
 ## How to use
 ```py
